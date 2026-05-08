@@ -1,1 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #0f172a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Loading Animation */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0f172a;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top: 5px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Layout Container */
+.container {
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile Section */
+header {
+    margin-bottom: 40px;
+}
+
+.profile-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.school-name {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Links Section */
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    background: #1e293b;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.link-card i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    width: 30px;
+}
+
+.link-card:hover {
+    background: #334155;
+    transform: scale(1.03);
+    border-color: #3b82f6;
+}
